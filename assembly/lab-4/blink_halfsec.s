@@ -8,10 +8,10 @@
 .org 0                    ; specify the start address
 
 main:     ldi r16,0       ; set register r16 to zero
-		  out SREG,r16    ; copy contents of r16 to SREG, this clears SREG
+	  out SREG,r16    ; copy contents of r16 to SREG, this clears SREG
 
-		  ldi r16,0x01    ; set register r16 to hexadecimal number 0x01. This hex represents 0000 0001 in binary, this binary representation is necessary because we connected a LED via PB0 (D8) pin to bit position 0 on PORTB and we need to set this bit to be in output mode on the DDRB
-		  out DDRB,r16    ; copy contents of r16 to DDRB, which writes a binary '1' to the bit position 0 and all other bit positions to a binary '0' on DDRB
+          ldi r16,0x01    ; set register r16 to hexadecimal number 0x01. This hex represents 0000 0001 in binary, this binary representation is necessary because we connected a LED via PB0 (D8) pin to bit position 0 on PORTB and we need to set this bit to be in output mode on the DDRB
+	  out DDRB,r16    ; copy contents of r16 to DDRB, which writes a binary '1' to the bit position 0 and all other bit positions to a binary '0' on DDRB
                           ; therefore, now the direction of data flow on PORTB bits 0-3 is in output mode (1) and bits 4-7 is in input mode (0)
 
 
