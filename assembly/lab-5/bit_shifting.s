@@ -14,11 +14,11 @@
 .org 0                    ; specify the start address
 
 main:     ldi r16,0       ; Set register r16 to zero
-		  out SREG,r16    ; Copy contents of r16 to SREG, this clears SREG and resets system status
+	  out SREG,r16    ; Copy contents of r16 to SREG, this clears SREG and resets system status
 
-		  ldi r16,0x0F    ; Set register r16 to hexadecimal number 0x0F. This hex represents 0000 1111 in binary
+	  ldi r16,0x0F    ; Set register r16 to hexadecimal number 0x0F. This hex represents 0000 1111 in binary
                           ; This is necessary because we connected LEDs to bits 0-3 on PORTB and we need to set these bits to be in output mode
-		  out DDRB,r16    ; Copy contents of r16 to DDRB, which writes a binary '1' to the bit positions 0-3 and all other bit positions to a binary '0' on DDRB
+	  out DDRB,r16    ; Copy contents of r16 to DDRB, which writes a binary '1' to the bit positions 0-3 and all other bit positions to a binary '0' on DDRB
                           ; Therefore, now the direction of data flow on PORTB bits 0-3 is in output mode (1:HIGH) and bits 4-7 is in input mode (0:LOW)
 
           ldi r16,0xF0    ; Set register r16 to hexadecimal number 0xF0. This hex represents 1111 0000 in binary
@@ -29,7 +29,7 @@ main:     ldi r16,0       ; Set register r16 to zero
 mainloop:
 
           ldi r16,0x55    ; Set register r16 to hexadecimal number
-		  out PORTB,r16   ; Copy contents of r16 to PORTB
+	  out PORTB,r16   ; Copy contents of r16 to PORTB
           out PORTD,r16   ; Copy contents of r16 to PORTB
 
           call delay
