@@ -18,7 +18,7 @@ main:      ldi r16,0       ; set register r16 to zero
 
            out SREG,r16    ; copy contents of r16 to SREG, which clears SREG
 
-		   ; configure PORTB for output
+	   ; configure PORTB for output
            ldi r16,0x0F    ; copy hexadecimal 0x0F, binary representation 0000 1111 to r16
            out DDRB,r16    ; write r16 to DDRB, setting up bits 0 to 3 in output mode (1)
 
