@@ -13,14 +13,14 @@
 .org 0
 ; reset system status
 main:     ldi r16,0       ; set register r16 to zero
-		  out SREG,r16    ; copy contents of r16 to SREG, which clears SREG
+	  out SREG,r16    ; copy contents of r16 to SREG, which clears SREG
 
-		  ldi r16,0x0F    ; set register r16 to hexadecimal number 0x0F. This hex represents 0000 1111 in binary, this structure of binary will be used to set bits 0-3 on DDRB to output mode (1)
-		  out DDRB,r16    ; copy contents of r16 to DDRB
+	  ldi r16,0x0F    ; set register r16 to hexadecimal number 0x0F. This hex represents 0000 1111 in binary, this structure of binary will be used to set bits 0-3 on DDRB to output mode (1)
+	  out DDRB,r16    ; copy contents of r16 to DDRB
 
 
           ldi r16,0x0D    ; set register r16 to hexadecimal number 0x0D, decimal 13, binary 0000 1101
-		  out PORTB,r16   ; copy contents of r16 to PORTB, which writes bits 4-7 to a binary 0, bits 3,2,0 to a binary 1 and bit 1 to a binary 0. Bits 0-3 of PORTB will control the state of the 4 external LEDs as they are connected to these bits only. as it is set to a binary 1 (output mode), the LEDs on bits 3,2,0 will turn on.
+	  out PORTB,r16   ; copy contents of r16 to PORTB, which writes bits 4-7 to a binary 0, bits 3,2,0 to a binary 1 and bit 1 to a binary 0. Bits 0-3 of PORTB will control the state of the 4 external LEDs as they are connected to these bits only. as it is set to a binary 1 (output mode), the LEDs on bits 3,2,0 will turn on.
 
 
 mainloop: rjmp mainloop   ; jump back to mainloop address this results in looping endlessly
