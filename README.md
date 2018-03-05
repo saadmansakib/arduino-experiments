@@ -8,11 +8,11 @@ at King's College London. I got to do some really cool stuff with LEDs, some of 
 
 **Lab 2** - *With the knowledege gained from the first assessment, I learned how to write a simple program to control the Arduino I/O interfaces to write out a hexadecimal number to externally connected LEDs.*
 
-**Lab 3** - *In this lab, I learned how to read external digital input on the Arduino and how to perform mathematical operations and do simple branching. Also, calculating a simple mathematical function.*
+**Lab 3** - *In this assessment, I learned how to read external digital input on the Arduino and how to perform mathematical operations and do simple branching. Also, calculating a simple mathematical function.*
 
 **Lab 4** - *This one was really interesting, I explored timing on the Arduino, and how to make the LEDs blink in specific patterns.*
 
-**Lab 5** - *In the final lab, I explored different bit-wise operations on the Arduino. Moreover, wrote a small assembly program to calculate the various components of a memory address with regards to a specific cache memory architecture.* 
+**Lab 5** - *In the final assessment, I explored different bit-wise operations on the Arduino. Moreover, wrote a small assembly program to calculate the various components of a memory address with regards to a specific cache memory architecture.* 
 
 <br/>
 
@@ -67,7 +67,7 @@ $ avr-ld -o file.elf file.o
 $ avr-objcopy -O ihex -R .eeprom file.elf file.hex
 ```
 
-**Step 3** - Finally, to flash the newly written program, follow step 3 under *Instructions*.
+**Step 3** - Finally, to flash the newly generated machine code that is `file.hex`, follow step 3 under *Instructions*.
 
 <br/>
 
